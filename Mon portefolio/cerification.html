@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification</title>
+    <style>
+        .certification {
+
+            height: 400px;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgb(176, 34, 34);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .titre-certificat {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: underline 3px;
+        }
+
+        .certificat-container {
+            position: relative;
+            width: 400px;
+            margin: 0 auto;
+            max-height: 250px;
+        }
+
+        .certificat-image {
+            width: 100%;
+            display: none;
+            border: solid 2px black;
+        }
+
+        .active {
+            display: block;
+            max-height: 250px;
+
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 20%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: none;
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 0;
+            margin-right: 30%;
+        }
+
+        .prev {
+            left: 0;
+            margin-left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="certification">
+
+        <h2 class="titre-certificat" Mes certification> Certification</h2>
+
+
+        <div class="certificat-container">
+
+            <img src="/assets/images/person-svgrepo-com.svg" class="certificat-image active">
+            <img src="/assets/images/image_secondaire.jpg" class="certificat-image">
+            <img src="/assets/images/think-svgrepo-com.svg" class="certificat-image">
+
+
+        </div>
+
+        <div class="certificat-boutton">
+
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementsByClassName("certificat-image");
+
+        function showSlide(n) {
+            // Masquer toutes les images
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+
+            // Gérer le dépassement d'index
+            if (n >= slides.length) currentSlide = 0;
+            if (n < 0) currentSlide = slides.length - 1;
+
+            // Afficher l'image courante
+            slides[currentSlide].classList.add("active");
+        }
+
+        // Gestionnaires d'événements pour les flèches
+        document.querySelector(".prev").addEventListener("click", () => {
+            currentSlide--;
+            showSlide(currentSlide);
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+            currentSlide++;
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+
+</html>
+</div>
+
+</html>

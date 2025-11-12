@@ -1,0 +1,470 @@
+* {
+
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    margin: 20px;
+
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    margin: 5px auto;
+    width: calc(100% - 30px);
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+
+}
+
+
+
+.logo a {
+    height: 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.logo :hover {
+    color: rgb(12, 41, 182);
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    background-color: white;
+}
+
+.nav a:hover {
+    color: rgb(12, 41, 182);
+}
+
+.back-accueil {
+    margin: 20px 0 0 0;
+    height: 400px;
+    position: relative;
+    background-image: url(/assets/images/image_secondaire.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.back-accueil .bienvenue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+
+}
+
+.bienvenue {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+    padding-top: 120px;
+
+}
+
+
+main {
+
+    margin: 20px;
+}
+
+.a-propos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    height: auto;
+    padding: 20px;
+    margin: 20px 40px;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.a-propos img {
+
+    margin: 5px;
+    width: 80px;
+    height: 12x;
+
+    border: 3px solid black;
+
+
+
+
+
+}
+
+
+
+
+.a-propos-1 {
+    text-align: center;
+    padding: 10px;
+    margin: 3px;
+    border: solid 3px;
+      height: auto;
+
+}
+.a-propos-2{
+  text-align: center;
+    padding: 10px;
+    margin: 3px;
+    border: solid 3px; 
+      height: auto;
+
+    
+}
+
+
+.a-propos-3 {
+    text-align: center;
+    padding: 10px;
+    margin: 3px;
+    border: solid 3px;
+  height: auto;
+}
+
+.a-propos-4 {
+    text-align: center;
+    padding: 10px;
+    margin: 3px;
+    border: solid 3px;
+      height: auto;
+
+
+}
+
+
+.contenue {
+    max-height: 50px;
+    margin: 50px;
+
+}
+
+
+.contenue h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+
+.BTS {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.titre-BTS {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  
+}
+
+
+.contenu-BTS {
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 70px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+gap: 50px;
+
+}
+
+.option-slam{
+    text-align: center;
+border: 1px solid black;
+width: 50%;
+
+}
+
+.option-sisr{
+    text-align: center;
+border: 1px solid black;
+width: 50%;
+}
+
+
+
+.parcours{
+
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(247, 245, 245);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.titre-parcours {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+   
+
+
+}
+
+.parcours-items {
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid 2px black;
+    animation: 1s ease forwards;
+    transform: translateY(20px);
+    margin-left: 80px;
+    margin-bottom: 100px;
+
+}
+
+
+.parcours-items ::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #00f7ff;
+}
+
+.parcours-start {
+    position: absolute;
+    left: -24px;
+    top: -10px;
+    width: 12px;
+    height: 12px;
+    background: #00f7ff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 247, 255, 0.7);
+}
+
+.parcours-end {
+    position: absolute;
+    left: -24px;
+    bottom: -10px;
+    width: 12px;
+    height: 12px;
+    background: #00f7ff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 247, 255, 0.7);
+}
+
+
+
+.titre-competence {
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline 3px;
+}
+
+
+.competence-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+
+
+}
+
+
+.competence-box-1 {
+    border: solid 2px black;
+    width: 45%;
+
+}
+
+.competence-box-2 {
+    border: solid 2px black;
+    width: 45%;
+
+}
+
+
+
+
+.veille {
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(242, 234, 234);
+    box-shadow: 0 2px 4px rgba(107, 8, 228, 0.744);
+}
+
+
+.titre-veille {
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline 3px;
+}
+
+
+
+
+.projet {
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(242, 234, 234);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.titre-projet {
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline 3px;
+}
+
+.grid-projet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin-left: 15%;
+    gap: 10px;
+    text-align: center;
+
+}
+
+
+.grid1 {
+
+
+    border: solid 10px;
+    height: 300px;
+    width: 300px;
+}
+
+.grid2 {
+
+
+    border: solid 10px;
+    height: 300px;
+    width: 300px;
+}
+
+.grid3 {
+
+
+    border: solid 10px;
+    height: 300px;
+    width: 300px;
+}
+
+.grid4 {
+
+
+    border: solid 10px;
+    height: 300px;
+    width: 300px;
+}
+
+.grid-projet a {
+    text-decoration: none;
+}
+
+
+
+
+
+.contact {
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(242, 234, 234);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.titre-contact {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline 3px;
+}
+
+
+
+
+
+.form-container .form-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 400px;
+    position: relative;
+}
+
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+}
