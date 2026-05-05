@@ -233,6 +233,7 @@ h1, h2 {
     border-radius: 16px;
     padding: 40px;
     border: 1px solid var(--border);
+    min-height: auto;
 }
 
 .titre-parcours {
@@ -242,21 +243,41 @@ h1, h2 {
     color: var(--accent);
 }
 
+.parcours-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.parcours-column {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    background: rgba(0, 0, 115, 0.08);
+}
+
+.parcours-sous-titre {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--accent);
+    text-align: center;
+}
+
 .parcours-items {
     position: relative;
     border-radius: 8px;
     padding: 20px;
     border: 1px solid var(--border);
-    margin-left: 40px;
-    margin-bottom: 24px;
-    width: 60%;
+    margin: 0 auto 24px auto;
+    width: 75%;
     background: rgba(0, 0, 115, 0.15);
 }
 
 .parcours-items::before {
     content: "";
     position: absolute;
-    left: -18px;
+    left: -12px;
     top: 0;
     width: 2px;
     height: 100%;
@@ -364,10 +385,15 @@ h1, h2 {
 
 .competence-progress-pro-bar {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
     margin-bottom: 16px;
 }
 
 .competence-progress-pro-bar .competence {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 4px;
@@ -378,6 +404,7 @@ h1, h2 {
     height: 8px;
     background: var(--accent);
     border-radius: 4px;
+    margin-left: auto;
 }
 
 .competenece-progress-value {
@@ -608,6 +635,15 @@ footer {
     .option-slam, .option-sisr {
         width: 100%;
     }
+
+    .parcours-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .parcours-items {
+        width: 100%;
+        margin: 0 0 24px 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -653,9 +689,17 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .parcours-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .parcours-column {
+        padding: 16px;
+    }
+
     .parcours-items {
-        width: 90%;
-        margin-left: 30px;
+        width: 100%;
+        margin: 0 0 24px 0;
     }
 
     .competence-box {
